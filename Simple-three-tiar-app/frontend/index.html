@@ -1,10 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Simple 3 Tier App</title>
+  <meta charset="UTF-8">
+  <title>Simple 3-Tier Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #333;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h1 {
+      margin-bottom: 10px;
+      color: #4f46e5;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .tiers {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    .tier {
+      background: #f3f4f6;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .tier span {
+      font-weight: bold;
+      color: #111827;
+    }
+
+    .status {
+      background: #ecfdf5;
+      color: #065f46;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Frontend Layer</h1>
-  <p>This is served by Nginx</p>
+  <div class="container">
+    <div class="card">
+      <h1>🚀 3-Tier App</h1>
+      <p class="subtitle">Deployed using GitHub Actions & Docker</p>
+
+      <div class="tiers">
+        <div class="tier">🖥 <span>Frontend:</span> Nginx (HTML + CSS)</div>
+        <div class="tier">⚙ <span>Backend:</span> Flask REST API</div>
+        <div class="tier">🗄 <span>Database:</span> PostgreSQL</div>
+      </div>
+
+      <div class="status">
+        ✅ Application deployed successfully
+      </div>
+
+      <footer>
+        CI/CD powered by GitHub Actions
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
